@@ -1,9 +1,9 @@
 #foo-et-al.py
-#This program runs the (fictional) foo et al parametization for calculating the volume of a sphere
+#This program runs the (fictional) foo et al parameterization for calculating the volume of a sphere
 
 import math
 from changeRadius import convertRadius
-from findPi import calculatePi
+from calculatePi import calculatePi
 
 class FooEtAl:
 
@@ -21,11 +21,11 @@ class FooEtAl:
 		#returns the value for pi
 		return self.pi
 
-	def changeRadius(self, radius)
+	def changeRadius(self, radius):
 		#change the value of the radius for the parametization
 		self.radius = convertRadius(radius)
 		return 0
 
 	def calculateVolume(self):
 		#return the 
-		return constantX * pi * radius
+		return self.constantX * self.pi * self.radius
