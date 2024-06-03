@@ -5,13 +5,14 @@ import math
 from changeRadius import convertRadius
 from calculatePi import calculatePi
 
+constantX = float(4/3)
+
 class FooEtAl:
 
 	def __init__(self, radius):
 		#defines the variables and constants of the foo et al. parametization
 		self.radius = convertRadius(radius)
 		self.pi = calculatePi()
-		self.constantX = (4/3)
 
 	def getRadius(self):
 		#returns the current radius
@@ -21,11 +22,11 @@ class FooEtAl:
 		#returns the value for pi
 		return self.pi
 
-	def changeRadius(self, radius):
+	def setRadius(self, radius):
 		#change the value of the radius for the parametization
 		self.radius = convertRadius(radius)
 		return 0
 
 	def calculateVolume(self):
-		#return the 
-		return self.constantX * self.pi * self.radius
+		#return the volume of the sphere
+		return constantX * self.pi * self.radius
