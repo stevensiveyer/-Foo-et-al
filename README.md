@@ -1,7 +1,7 @@
 #  Foo et al
  The fictional Foo et al parameterization for calculating the volume of a sphere 
 
-there are four python files part of this software package
+there are five python files part of this software package
 1. foo-et-al.py
 2. changeRadius.py
 3. calculatePi.py
@@ -13,4 +13,6 @@ changeRadius.py has a function that given the radius of the sphere makes the nec
 
 calculatePi.py has a function where calculations to find pi are done and returned
 
-main.py allows for a simple 
+main.py is the driver code for anyone to use the program to calculate
+
+testFooEtAl.py does unit tests on fooEtAl.py to make sure that it is still working as intended 
