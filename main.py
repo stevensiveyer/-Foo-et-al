@@ -3,6 +3,7 @@
 
 from fooEtAl import FooEtAl
 
+yesList = ["y", "yes"]
 
 if __name__ == "__main__":
 	keepGoing = True 
@@ -16,8 +17,17 @@ if __name__ == "__main__":
 				print("The volume of the sphere is: ", circleVolume)
 
 				#ask to continue doing calculations
-				if "Y" != input("Would you like to calculate another volume? (Y or N)"):
-					keepGoing = False
+				answer = input("Would you like to calculate another volume? (Y or N)").lower()
+
+				#Itterate over possible yes answers
+				for x in range(len(yesList)):
+					if yesList[x] == answer:
+						#if found a entered yes, continue asking for radius measurements
+						keepGoing = True
+						break
+					else: 
+						#If not given a yes, program ends
+						keepGoing = False
 			else: 
 				print("Entered value is not premited, value must be a positive number.")
 		except:
