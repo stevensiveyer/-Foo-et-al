@@ -15,7 +15,8 @@ class FooEtAl:
 			raise ValueError("Entered value is not premited, value must be a positive number.")
 		if radius < 0:
 			raise ValueError("Entered value is not premited, value must be a positive number.")
-		self.radius = (convertRadius(float(radius)))
+		self.radius = radius
+		self.radius3 = (convertRadius(float(radius)))
 		self.pi = float(calculatePi())
 
 	def getRadius(self):
@@ -32,9 +33,10 @@ class FooEtAl:
 			raise ValueError("Entered value is not premited, value must be a positive number.")
 		if radius < 0:
 			raise ValueError("Entered value is not premited, value must be a positive number.")
-		self.radius = convertRadius(radius)
+		self.radius = radius
+		self.radius3 = convertRadius(radius)
 		return 0
 
 	def calculateVolume(self):
 		#return the volume of the sphere
-		return constantX * self.pi * self.radius
+		return constantX * self.pi * self.radius3
