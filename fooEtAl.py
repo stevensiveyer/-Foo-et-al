@@ -11,8 +11,12 @@ class FooEtAl:
 
 	def __init__(self, radius):
 		#defines the variables and constants of the foo et al. parametization
-		self.radius = convertRadius(radius)
-		self.pi = calculatePi()
+		if not isinstance(radius, (float, int)):
+			raise ValueError("Entered value is not premited, value must be a positive number.")
+		if radius < 0:
+			raise ValueError("Entered value is not premited, value must be a positive number.")
+		self.radius = (convertRadius(float(radius)))
+		self.pi = float(calculatePi())
 
 	def getRadius(self):
 		#returns the current radius
@@ -24,6 +28,10 @@ class FooEtAl:
 
 	def setRadius(self, radius):
 		#change the value of the radius for the parametization
+		if not isinstance(radius, (float, int)):
+			raise ValueError("Entered value is not premited, value must be a positive number.")
+		if radius < 0:
+			raise ValueError("Entered value is not premited, value must be a positive number.")
 		self.radius = convertRadius(radius)
 		return 0
 
